@@ -22,13 +22,10 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    # Registering the original service under an internal ID
-    App\Service\NotificationService.inner:
-        class: App\Service\NotificationService
-        autowire: true
-
-    # We declare that, for the `NotificationService` type, Symfony should provide our Proxy.
-    App\Service\NotificationService:
-        class: App\Proxy\EnvFlagProxy
+    # Setting up the decorator
+    App\Proxy\EnvFlagProxy:
+        # We specify exactly which service we are wrapping.
+        decorates: App\Service\NotificationService
+        # We transfer the original service to the constructor using the special syntax '.inner'
         arguments:
-            $originalService: '@App\Service\NotificationService.inner'
+            $originalService: '@.inner'
