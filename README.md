@@ -18,9 +18,8 @@ Now you can run application at http://127.0.0.1:8000.
 ## Explanation of key points
 
 1. Let’s write our own attribute: `src/Attribute/CheckEnvironmentFlag.php`
-2. Let's register the auto-configuration for the new attribute in the `src/Kernel.php` file.
-3. Let’s write a proxy service for our NotificationService: `src/Proxy/EnvFlagProxy.php`.
-4. Let’s link this proxy service to the original service in the `config/services.yaml` file.
+2. Let’s write a proxy service for our NotificationService: `src/Proxy/EnvFlagProxy.php`.
+3. Let’s link this proxy service to the original service in the `config/services.yaml` file.
 
 
 
