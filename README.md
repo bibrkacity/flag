@@ -1,4 +1,4 @@
-# Symfony. The test of the using the own attribute for method\'s flag
+# Symfony. The test of the using the own attribute for method's flag
 
 A method flag is a parameter used to control a method's behavior. Let’s look at a simple scenario: an "AB" parameter in an `.env` file will determine whether a method should execute. This is useful, for example, for A/B testing or canary deployments.
 
