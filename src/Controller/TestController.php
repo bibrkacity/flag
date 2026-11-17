@@ -22,7 +22,7 @@ class TestController
         $cms = $this->notificationService->sendSmsNotification('Test SMS');
 
         return new Response(
-            '<html>
+            '<html lang="en">
                         <body>
                             <h1>Test of the using the own attribute for method\'s flag </h1>
                             <p>Parameter AB in .env = '.$_ENV['AB'] . '</p>
@@ -30,7 +30,7 @@ class TestController
                             <li><strong>Email</strong>: ' . $email . '</li>
                             <li><strong>SMS</strong>: ' . $cms . '</li>
                             </ul>
-                            <input type="button" value="Reload page" onclick="location.href=\'/?x=\'+Date.now();"
+                            <input type="button" value="Reload page" onclick="location.href=\'/?x=\'+Date.now();">
                         </body>
                     </html>'
         );
